@@ -1,0 +1,14 @@
+server:
+  port: 8300
+spring.cloud.stream:
+  function:
+    definition: supplier
+  bindings:
+    supplier-out-0:
+      destination: order-request
+  kafka:
+    binder:
+      brokers:
+        - localhost:29092
+
+
